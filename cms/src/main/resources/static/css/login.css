@@ -1,0 +1,116 @@
+/* body {font:12px Tahoma;margin:0px;text-align:center;background:#FFF;} 
+	a:link,a:visited {font-size:12px;text-decoration:none;} 
+	a:hover{} 
+	.tt{font-size:12px;background:#eff3f2}
+	.left{font-size:12px;text-align:left}
+	椤甸潰灞傚鍣� 
+	#container {width:800px;margin:10px auto} 
+
+	椤甸潰澶撮儴 
+	#header {background:url(../images/logo1.jpg) no-repeat; width:730px; 璁惧畾瀹藉害 margin:0px auto; 灞呬腑 height:55px; }
+	#menu {padding:20px 20px 0 0} 
+	鍒╃敤padding:20px 20px 0 0鏉ュ浐瀹氳彍鍗曚綅缃� 
+	#menu ul {float:right;list-style:none;margin:0px;}
+	娣诲姞浜唂loat:right浣垮緱鑿滃崟浣嶄簬椤甸潰鍙充晶 
+	#menu ul li {float:left;margin:0 10px;display:block;line-height:28px}
+	.menuDiv {width:1px;height:24px;background:#999}
+	#menu ul li a:link,#menu ul li a:visited {font-weight:bold;color:#666} 
+	#menu ul li a:hover{}
+
+	#banner { background:url(../images/banner.jpg) 0 30px no-repeat; 鍔犲叆鑳屾櫙鍥剧墖 width:730px; 璁惧畾灞傜殑瀹藉害 margin:auto; 灞傚眳涓� height:142px; 璁惧畾楂樺害 border-bottom:5px solid #EFEFEF; 鐢讳竴鏉℃祬鐏拌壊瀹炵嚎 clear:both 娓呴櫎娴姩 }
+
+	#pagebody { width:730px; 璁惧畾瀹藉害 margin:8px auto; 灞呬腑 }
+
+	#sidebar { background:url() no-repeat; width:158px; 璁惧畾瀹藉害 text-align:left; 鏂囧瓧宸﹀榻� float:left; 娴姩灞呭乏 clear:left; 涓嶅厑璁稿乏渚у瓨鍦ㄦ诞鍔� overflow:hidden; 瓒呭嚭瀹藉害閮ㄥ垎闅愯棌 }
+
+	#mainbody { width:568px; text-align:left;float:right; 娴姩灞呭彸 clear:right; 涓嶅厑璁稿彸渚у瓨鍦ㄦ诞鍔� overflow:hidden;}
+
+	#footer {
+	padding-bottom:0px;
+	width:730px;
+	height:90px;
+	clear: both;
+	background: #828377 url(../images/footer.jpg) no-repeat top left;
+	} */
+.login_main{
+	    background-image: url("/images/login_background.png");
+
+    background-position: center 0;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    background-size: 650px;
+
+    -webkit-background-size: cover;
+
+    -o-background-size: cover;
+
+    -moz-background-size: cover;
+
+    -ms-background-size: cover;
+}
+.box1{
+
+position:relative;
+
+width:992px;
+
+height:422px;
+
+margin:0 auto;
+
+}
+
+.box2{
+
+position:relative;
+
+width:100%;
+
+height:100%;
+
+}
+
+img{
+
+position:relative;
+
+clear:both;
+
+width:100%;
+
+height:100%;
+
+}
+
+.wenzi{
+
+position:relative;
+
+clear:both;
+
+width:100%;
+
+top:-100%;
+
+text-align:center;
+
+color:black;
+
+font-size:2em;
+
+}
+.input_bg{
+	position:relative;
+	
+	background-color: white;
+	
+	
+	text-align:center;
+}
+.input_border{
+	margin-top: 30px
+}
+	

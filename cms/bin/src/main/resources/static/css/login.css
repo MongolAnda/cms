@@ -1,0 +1,34 @@
+body {font:12px Tahoma;margin:0px;text-align:center;background:#FFF;} 
+	a:link,a:visited {font-size:12px;text-decoration:none;} 
+	a:hover{} 
+	.tt{font-size:12px;background:#eff3f2}
+	.left{font-size:12px;text-align:left}
+	/*页面层容器*/ 
+	#container {width:800px;margin:10px auto} 
+
+	/*页面头部*/ 
+	#header {background:url(../images/logo1.jpg) no-repeat; width:730px; /*设定宽度*/ margin:0px auto; /*居中*/ height:55px; }
+	#menu {padding:20px 20px 0 0} 
+	/*利用padding:20px 20px 0 0来固定菜单位置*/ 
+	#menu ul {float:right;list-style:none;margin:0px;}
+	/*添加了float:right使得菜单位于页面右侧*/ 
+	#menu ul li {float:left;margin:0 10px;display:block;line-height:28px}
+	.menuDiv {width:1px;height:24px;background:#999}
+	#menu ul li a:link,#menu ul li a:visited {font-weight:bold;color:#666} 
+	#menu ul li a:hover{}
+
+	#banner { background:url(../images/banner.jpg) 0 30px no-repeat; /*加入背景图片*/ width:730px; /*设定层的宽度*/ margin:auto; /*层居中*/ height:142px; /*设定高度*/ border-bottom:5px solid #EFEFEF; /*画一条浅灰色实线*/ clear:both /*清除浮动*/ }
+
+	#pagebody { width:730px; /*设定宽度*/ margin:8px auto; /*居中*/ }
+
+	#sidebar { background:url() no-repeat; width:158px; /*设定宽度*/ text-align:left; /*文字左对齐*/ float:left; /*浮动居左*/ clear:left; /*不允许左侧存在浮动*/ overflow:hidden; /*超出宽度部分隐藏*/ }
+
+	#mainbody { width:568px; text-align:left;float:right; /*浮动居右*/ clear:right; /*不允许右侧存在浮动*/ overflow:hidden;}
+
+	#footer {
+	padding-bottom:0px;
+	width:730px;
+	height:90px;
+	clear: both;
+	background: #828377 url(../images/footer.jpg) no-repeat top left;
+	}
