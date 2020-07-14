@@ -38,8 +38,14 @@ public class QueryCallRecordAction {
 	 * @return
 	 */
 	@GetMapping("/tqc")
-	public ModelAndView index(HttpSession session) {
+	public ModelAndView toQueryCallGet(HttpSession session) {
 		ModelAndView modelAndView = new ModelAndView("QueryCallRecord");
+		session.setAttribute("callPage",1);
+		return modelAndView;
+	}
+	@PostMapping("/tqc")
+	public ModelAndView toQueryCallPost(HttpSession session) {
+		ModelAndView modelAndView = new ModelAndView("queryCallRecordResult");
 		session.setAttribute("callPage",1);
 		return modelAndView;
 	}
@@ -51,8 +57,8 @@ public class QueryCallRecordAction {
 	 * @param session 会话
 	 */
 	@PostMapping("/qcr")
-	public void queryCallRecord(@RequestParam Map<String, String> paramMap, HttpSession session) {
-		
+	public ModelAndView queryCallRecord(@RequestParam Map<String, String> paramMap, HttpSession session) {
+		ModelAndView model = new ModelAndView();
 		logger.info("用户查询短信年月信息:{}",paramMap);
 		
 		// 从页面读取月份和年份
@@ -84,6 +90,8 @@ public class QueryCallRecordAction {
 		}
 		//设置首页
 		session.setAttribute("callPage", 1);
+		model.setViewName("queryCallRecordResult");
+		return model;
 	}
 	
 	/**
@@ -109,7 +117,7 @@ public class QueryCallRecordAction {
 		//model中放入开始和结束参数
 		session.setAttribute("callStart",(page-1)*10);
 		session.setAttribute("callEnd",page*10-1);
-		modelAndView.setViewName("QueryCallRecord");
+		modelAndView.setViewName("queryCallRecordResult");
 		return modelAndView;
 	}
 	/**
@@ -146,7 +154,7 @@ public class QueryCallRecordAction {
 			session.setAttribute("callStart",(page-1)*10);
 			session.setAttribute("callEnd",page*10-1);
 		}
-		modelAndView.setViewName("QueryCallRecord");
+		modelAndView.setViewName("queryCallRecordResult");
 		return modelAndView;
 	}
 	

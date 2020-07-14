@@ -13,7 +13,7 @@ import com.cms.interceptor.LoginHandlerInterceptor;
  * @date 2020年7月13日
  * @since JDK 1.8
  */
-//@Component
+@Component
 public class LoginHandlerInterceptorConfig implements WebMvcConfigurer {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {

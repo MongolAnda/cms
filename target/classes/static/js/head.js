@@ -6,6 +6,4 @@ document.writeln(" <script type='text/javascript' src='/js/main.js'></script>");
 document.writeln(" <script type='text/javascript' src='/js/changePassword.js'></script>");
 document.writeln(" <script type='text/javascript' src='/js/monthlyBill.js'></script>");
 document.writeln(" <script type='text/javascript' src='/js/QueryCallRecord.js'></script>");
-document.writeln(" <script type='text/javascript' src='/js/QueryCallRecordResult.js'></script>");
 document.writeln(" <script type='text/javascript' src='/js/QueryMassageRecord.js'></script>");
-document.writeln(" <script type='text/javascript' src='/js/QueryMassageRecordResult.js'></script>");

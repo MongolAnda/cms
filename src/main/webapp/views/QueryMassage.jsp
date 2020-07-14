@@ -6,15 +6,12 @@
 <head>
 <title>短信查询</title>
 <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
-<script type="text/javascript" src="/js/QueryMassageRecord.js"></script>
-<script type="text/javascript" src="/js/QueryMassageRecordResult.js"></script>
 <script type="text/javascript" src="/js/head.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 
 <style>
 	.TitleFont{
 		font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
-		font-style: italic;
 		color: #245269;
 	}
 </style>
@@ -28,14 +25,14 @@
 	</div>
 
 	<div align="center">
-		<form name="reg_testdate" class="basic-grey">
-			<select name="YYYY" id="year" >
+		<form name="reg_testdateM" class="basic-grey" method="post"> 
+			<select name="YYYY" id="yearM" >
 				<option value="">请选择 年</option>
 			</select> 
-			<select name="MM" id="month" >
+			<select name="MM" id="monthM" >
 				<option value="">选择 月</option>
 			</select>
-			<input type="submit" id="QueryMassage_sub" value="查询">
+			<input type="submit" onclick="queryMassage()" value="查询">
 		</form>
 	</div>
 	
@@ -56,8 +53,8 @@
 		   <tr>
 		   
 			  	<th>
-			  	<c:if test="${msgList.get(i).messageType} == 0">短信</c:if>
-			  	<c:if test="${msgList.get(i).messageType} == 1">彩信</c:if>
+			  	<c:if test="${msgList.get(i).messageType == 0}">短信</c:if>
+			  	<c:if test="${msgList.get(i).messageType == 1}">彩信</c:if>
 			  	</th>
 			  	<th>${msgList.get(i).messageFrom}</th>
 			  	<th>${msgList.get(i).messageFromTo}</th>
@@ -65,8 +62,8 @@
 			  	<th>${msgList.get(i).messageMoney}</th>
 			  	
 			  	<th>
-			  	<c:if test="${msgList.get(i).messageStatus} == 0">短信</c:if>
-			  	<c:if test="${msgList.get(i).messageStatus} == 0">短信</c:if>
+			  	<c:if test="${msgList.get(i).messageStatus == 0}">未发送</c:if>
+			  	<c:if test="${msgList.get(i).messageStatus == 1}">已发送</c:if>
 			  	</th>
 		  </tr>
 		  </c:forEach>

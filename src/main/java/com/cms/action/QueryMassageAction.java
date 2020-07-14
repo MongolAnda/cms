@@ -46,6 +46,12 @@ public class QueryMassageAction {
 		session.setAttribute("msgPage",1);
 		return modelAndView;
 	}
+	@PostMapping("/tqm")
+	public ModelAndView toQueryMessagePost(HttpSession session) {
+		ModelAndView modelAndView = new ModelAndView("QueryMassageRecordResult");
+		session.setAttribute("msgPage",1);
+		return modelAndView;
+	}
 	/**
 	 * 
 	 * @Title: queryMsgRecord
@@ -54,8 +60,8 @@ public class QueryMassageAction {
 	 * @param session
 	 */
 	@PostMapping("qmr")
-	public void queryMsgRecord(@RequestParam Map<String, String> paramMap, HttpSession session) {
-		
+	public ModelAndView queryMsgRecord(@RequestParam Map<String, String> paramMap, HttpSession session) {
+		ModelAndView model = new ModelAndView();
 		logger.info("用户查询短信年月信息:{}",paramMap);
 		
 		// 从页面读取月份和年份
@@ -86,6 +92,8 @@ public class QueryMassageAction {
 		}
 		//设置首页
 		session.setAttribute("msgPage", 1);
+		model.setViewName("QueryMassageRecordResult");
+		return model;
 	}
 	/**
 	 * 
@@ -119,7 +127,7 @@ public class QueryMassageAction {
 			session.setAttribute("msgStart",(page-1)*10);
 			session.setAttribute("msgEnd",page*10-1);
 		}
-		modelAndView.setViewName("QueryMassage");
+		modelAndView.setViewName("QueryMassageRecordResult");
 		return modelAndView;
 	}
 	/**
@@ -145,7 +153,7 @@ public class QueryMassageAction {
 		//model中放入开始和结束参数
 		session.setAttribute("msgStart",(page-1)*10);
 		session.setAttribute("msgEnd",page*10-1);
-		modelAndView.setViewName("QueryMassage");
+		modelAndView.setViewName("QueryMassageRecordResult");
 		return modelAndView;
 	}
 

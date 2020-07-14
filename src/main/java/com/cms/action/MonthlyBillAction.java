@@ -35,7 +35,7 @@ public class MonthlyBillAction {
 	 * @Description: 查询月账单
 	 * @return	提示信息
 	 */
-	@RequestMapping(value = "/mb", method = RequestMethod.GET)
+	@RequestMapping("/mb")
 	public ModelAndView monthlyBill(HttpSession session) {
 		//获取用户手机号
 		String userId = (String) session.getAttribute("phone");
@@ -58,15 +58,20 @@ public class MonthlyBillAction {
 				totalPage = (totalCount/10) + 1;//不足十条多加一页
 			}
 			String page = "1";//首页
-			modelAndView.setViewName("monthlyBill");
+			//设置开始和结束
+			if(list.size()<=10) {
+				session.setAttribute("start", 0);
+				session.setAttribute("end", list.size()-1);
+			}else {
+				session.setAttribute("start", 0);
+				session.setAttribute("end", 9);
+			}
 			//传往前端的参数
 			session.setAttribute("billList",list);
 			session.setAttribute("billTypeList",billTypeList);
 			modelAndView.addObject("page",page);
 			modelAndView.addObject("totalPage",String.valueOf(totalPage));
 			modelAndView.addObject("billMsg","查询成功");
-			modelAndView.addObject("start",0);
-			modelAndView.addObject("end",9);
 		}
 		return modelAndView;
 	}

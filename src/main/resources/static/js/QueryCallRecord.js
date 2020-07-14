@@ -1,11 +1,11 @@
 /**
  * 
  */
-$(function() {
-	$("#QueryCallRecord_sub").click(function() {
-		queryCallRecord();
-	});
-})
+//$(function() {
+//	$("#QueryCallRecord_sub").click(function() {
+//		queryCallRecord();
+//	});
+//})
 /**
  * 通话记录
  * @returns
@@ -25,9 +25,10 @@ function queryCallRecord() {
 	$.post({
 		url : "/qc/qcr",
 		data : oj,
-		success : function(data) {
-			window.location.href = '/qc/tqc';
-		}
+//		success : function(data) {
+//			window.location.reload();
+//			//window.location.href = '/qc/tqc';
+//		}
 	})
 }
 /**

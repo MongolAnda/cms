@@ -1,19 +1,19 @@
 /**
  * 
  */
-$(function() {
-	$("#QueryMassage_sub").click(function() {
-		queryMassage();
-	});
-})
+//$(function() {
+//	$("#QueryMassage_sub").click(function() {
+//		queryMassage();
+//	});
+//})
 /**
  * 读取页面年月信息
  * @returns
  */
 function queryMassage() {
 	// 读取页面月份
-	var month = $("#month").val(); 
-	var year = $("#year").val();
+	var month = $("#monthM").val(); 
+	var year = $("#yearM").val();
 	// 对象接受数据
 	var oj = new Object();
 	oj.month = month;
@@ -23,9 +23,9 @@ function queryMassage() {
 	$.post({
 		url : "/qm/qmr",
 		data : oj,
-		success : function(data) {
-			window.location.href = '/qm/tqm';
-		}
+//		success : function(data) {
+//			window.location.href = '/qm/tqm';
+//		}
 	})
 }
 /**
@@ -46,7 +46,7 @@ function toMsgPreviousPage(page,totalPage){
 		url : "/qm/mpp",
 		data : pageData,
 		success : function(data) {
-				window.location.href="/views/QueryMassage.jsp"
+				window.location.href="/views/QueryMassageRecordResult.jsp"
 			}
 	})
 }
@@ -68,26 +68,26 @@ function toMsgNextPage(page,totalPage){
 		url : "/qm/mnp",
 		data : pageData,
 		success : function(data) {
-			window.location.href="/views/QueryMassage.jsp"
+			window.location.href="/views/QueryMassageRecordResult.jsp"
 		}
 	})
 }
-function YYYYMMDDstart(){   
+function YYYYMMDDstartM(){   
 
     //先给年下拉框赋内容   
     var y  = new Date().getFullYear();   
     for (var i = (y-30); i < (y+30); i++) //以今年为准，前30年，后30年   
-            document.reg_testdate.YYYY.options.add(new Option(" "+ i +" 年", i));   
+            document.reg_testdateM.YYYY.options.add(new Option(" "+ i +" 年", i));   
 
     //赋月份的下拉框
     for (var i = 1; i < 13; i++)   
-            document.reg_testdate.MM.options.add(new Option(" " + i + " 月", i));   
+            document.reg_testdateM.MM.options.add(new Option(" " + i + " 月", i));   
 
-    document.reg_testdate.YYYY.value = y;   
-    document.reg_testdate.MM.value = new Date().getMonth() + 1;   
+    document.reg_testdateM.YYYY.value = y;   
+    document.reg_testdateM.MM.value = new Date().getMonth() + 1;   
 
 	}  
 if(document.attachEvent)   
-window.attachEvent("onload", YYYYMMDDstart);   
+window.attachEvent("onload", YYYYMMDDstartM);   
 else   
-window.addEventListener('load', YYYYMMDDstart, false);   
+window.addEventListener('load', YYYYMMDDstartM, false);   

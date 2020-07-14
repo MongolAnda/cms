@@ -63,7 +63,7 @@ public class PwdAction {
 	 * @Description: 跳转到改密成功页面
 	 * @return
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping("/")
 	public ModelAndView toChangePasswordSuccess() {
 		ModelAndView modelAndView = new ModelAndView("changePasswordSuccess");
 		return modelAndView;

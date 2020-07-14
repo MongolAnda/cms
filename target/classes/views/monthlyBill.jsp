@@ -23,7 +23,7 @@
      	${i}
      </c:forEach>  --%>
      <div class="page-header">
-	  <h1>用户:${phone}的星级为${billList.get(0).consumerLevel} 套餐为:${billList.get(0).packageId}  </h1>
+	  <h1>用户:${phone}的星级为${billList.get(0).consumerLevel} 套餐为:V${billList.get(0).packageId}  </h1>
 	</div>
      <table class="table table-striped">
      	  <tr>
@@ -40,7 +40,7 @@
 			  	<th>
 			  		<c:if test="${billTypeList.get(i) == 1}">短信</c:if>
 			  		<c:if test="${billTypeList.get(i) == 2}">通话</c:if>
-			  		<c:if test="${billTypeList.get(i) == 0}">未知</c:if>
+			  		<c:if test="${billTypeList.get(i) == 0}">充值</c:if>
 			  	</th>
 		  </tr>
 		  </c:forEach>

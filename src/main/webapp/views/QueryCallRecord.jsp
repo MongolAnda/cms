@@ -26,19 +26,18 @@
 	</div>
 
 	<div align="center" >
-		<form name="reg_testdate" class="basic-grey">
+		<form name="reg_testdate" class="basic-grey" method="post">
 			<select name="YYYY" id="year" >
 				<option value="">请选择 年</option>
 			</select> <select name="MM" id="month" >
 				<option value="">选择 月</option>
 			</select>
-			<input type="submit" id="QueryCallRecord_sub" value="查询">
+			<input type="submit" id="QueryCallRecord_sub" onclick="queryCallRecord()" value="查询">
 		</form>
 	</div>
 	
 	<div style="height:50px">
 	</div>
-	
 	<div align="center">
 	<c:if test="${not empty callList}">
 		<table id="tab1" class="table table-bordered">

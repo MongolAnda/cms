@@ -22,7 +22,7 @@ public class IndexAction {
 	 * @Description: 访问主页
 	 * @return
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping("/")
 	public ModelAndView index() {
 		ModelAndView modelAndView = new ModelAndView("main");
 		return modelAndView;
